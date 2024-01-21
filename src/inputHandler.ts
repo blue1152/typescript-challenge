@@ -10,7 +10,8 @@
  * 輸入: 123
  * 輸出: 'Input is a number: 123'
  */
+export type Input = string | number;
 
-export function handleInput(input) {
-    // 在此實現函式
+export function handleInput(input: Input): string {
+    return `Input is a ${typeof input}: ${input}`;
 }

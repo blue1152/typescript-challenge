@@ -23,6 +23,11 @@ export enum BookCategory {
  * 輸出: 'Book category: Novel'
  */
 
-export function getBookCategory(category) {
-  // 在此實現函式
+export function getBookCategory(category: BookCategory): string {
+  const result = {
+    [BookCategory.Novel]: 'Novel',
+    [BookCategory.Science]: 'Science',
+    [BookCategory.Education]: 'Education'
+  }
+  return `Book category: ${result[category]}`;
 }
